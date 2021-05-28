@@ -75,13 +75,18 @@ img {
 	font-weight: 500;
 }
 
-.player-score,
-.computer-score {
+.computer-score,
+.player-score {
 	font-weight: 600;
 }
 
+.computer-choice img,
+.player-choice img {
+	animation: 0.4s show ease-in;
+}
+
 .start-text {
-	transition: all 0.4s ease-in-out;
+	transition: all 0.8s ease-in-out;
 	position: relative;
 }
 
@@ -90,4 +95,14 @@ img {
 	margin-top: -50px;
 	opacity: 0;
 	z-index: -10;
+}
+
+/* Slowly load image */
+@keyframes show {
+	0% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
 }
