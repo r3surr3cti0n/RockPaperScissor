@@ -75,6 +75,17 @@ img {
 	font-weight: 500;
 }
 
+.score {
+	position: relative;
+}
+
+.score i {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	padding: 0.4em;
+}
+
 .computer-score,
 .player-score {
 	font-weight: 600;

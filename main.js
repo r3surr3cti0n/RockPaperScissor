@@ -4,6 +4,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 let playerSelection;
+let newGame = document.querySelector("#new-game");
 
 const subTitle = document.querySelector(".sub-title");
 const startText = document.querySelector(".start-text");
@@ -67,10 +68,21 @@ let Game = (computerSelection, playerSelection) => {
 	compChoiceOut.innerHTML = `<img src="img/${computerSelection}.png" >`;
 	playerChoiceOut.innerHTML = `<img src="img/${playerSelection}.png" >`;
 	// Score
-	compScoreOut.innerHTML = computerScore;
-	playerScoreOut.innerHTML = playerScore;
+	setScore(computerScore, playerScore);
 
 	if (startText.classList.length == 1) {
 		startText.classList.add("hide");
 	}
 };
+
+function setScore(computer, player) {
+	compScoreOut.innerHTML = computer;
+	playerScoreOut.innerHTML = player;
+}
+
+newGame.addEventListener("click", () => {
+	startText.classList.remove("hide");
+	computerScore = 0;
+	playerScore = 0;
+	setScore(computerScore, playerScore);
+});
