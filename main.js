@@ -70,5 +70,7 @@ let Game = (computerSelection, playerSelection) => {
 	compScoreOut.innerHTML = computerScore;
 	playerScoreOut.innerHTML = playerScore;
 
-	startText.classList.add("hide");
+	if (startText.classList.length == 1) {
+		startText.classList.add("hide");
+	}
 };
