@@ -65,8 +65,7 @@ let Game = (computerSelection, playerSelection) => {
 	}
 
 	// Choice
-	compChoiceOut.innerHTML = `<img src="img/${computerSelection}.png" >`;
-	playerChoiceOut.innerHTML = `<img src="img/${playerSelection}.png" >`;
+	setImg(computerSelection, playerSelection);
 	// Score
 	setScore(computerScore, playerScore);
 
@@ -78,6 +77,11 @@ let Game = (computerSelection, playerSelection) => {
 function setScore(computer, player) {
 	compScoreOut.innerHTML = computer;
 	playerScoreOut.innerHTML = player;
+}
+
+function setImg(computer, player) {
+	compChoiceOut.innerHTML = `<img src="img/${computer}.png" alt="${computer}" title="${computer}">`;
+	playerChoiceOut.innerHTML = `<img src="img/${player}.png" alt="${player}" title="${player}">`;
 }
 
 newGame.addEventListener("click", () => {
