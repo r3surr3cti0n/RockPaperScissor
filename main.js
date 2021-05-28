@@ -1,6 +1,8 @@
 chances = ["rock", "paper", "scissor"];
 localStorage.setItem("playerScore", 0);
 localStorage.setItem("computerScore", 0);
+let playerScore = localStorage.getItem("playerScore");
+let computerScore = localStorage.getItem("computerScore");
 
 let computerPlay = () => {
 	return chances[Math.floor(chances.length * Math.random())];
@@ -50,6 +52,5 @@ for (let i = 0; i < 10; i++) {
 }
 
 // Scores
-let playerScore = localStorage.getItem("playerScore");
-let computerScore = localStorage.getItem("computerScore");
+
 alert(`Computer score: ${computerScore} | Player score: ${playerScore}`);
