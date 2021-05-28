@@ -37,8 +37,8 @@ img {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
-	padding: 2em 3em;
-	width: 90%;
+	padding: 1em;
+	width: 100%;
 	max-width: 45em;
 }
 
@@ -50,6 +50,7 @@ img {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	gap: 1em;
 	height: 100px;
 }
 
