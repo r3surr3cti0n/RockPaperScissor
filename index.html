@@ -4,25 +4,40 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="main.css" />
 		<title>Rock, Paper, Scrissor</title>
 	</head>
 	<body>
+		<h2 class="title">Kő, papír, olló.</h2>
 		<div class="game-box">
-			<div class="title">Rock, Paper, Scissor.</div>
-			<div class="sub-title"></div>
+				<p>Esemény: <span class="sub-title"></span></p>
+				<div class="score">
+					<p class="important">
+						Számítógép: <span class="computer-score"></span>
+					</p>
+					<p class="important">Játékos: <span class="player-score"></span></p>
+				</div>
 			<!-- Display the final choices -->
 			<div class="final-choices">
-				<div class="player-choice-final"></div>
-				<div class="computer-choice-final"></div>
+				<p>
+					<p class="important">Számítógép választása:</p>
+					<div class="computer-choice"></div>
+				</p>
+				<p>
+					<p class="important">Játékos választása:</p>
+					<div class="player-choice"></div>
+				</p>
 			</div>
 			<!-- User's choices -->
+			<p style="text-align: center;" class="start-text">Válassz egyet az alábbiak közül, hogy elinduljon az első kör.</p>
+
 			<div class="players-choices">
-				<button class="rock-btn">rock</button>
-				<button class="paper-btn">paper</button>
-				<button class="scissor-btn">scissor</button>
+				<img class="rock-btn choice" src="img/ko.png" alt="" />
+				<img class="paper-btn choice" src="img/papir.png" alt="" />
+				<img class="scissor-btn choice" src="img/ollo.png" alt="" />
 			</div>
 		</div>
 
-		<script src="main.js"></script>
+		<script type="module" src="main.js"></script>
 	</body>
 </html>
