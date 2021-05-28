@@ -100,7 +100,7 @@ img {
 /* Slowly load image */
 @keyframes show {
 	0% {
-		opacity: 0.5;
+		opacity: 0.4;
 	}
 	100% {
 		opacity: 1;
