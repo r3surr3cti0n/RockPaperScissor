@@ -1,11 +1,13 @@
 import { chances, computerPlay } from "./computer.js";
 
-let playerScore = 0;
+// Score
 let computerScore = 0;
+let playerScore = 0;
 
 let playerSelection;
 let newGame = document.querySelector("#new-game");
 
+// Text
 const subTitle = document.querySelector(".sub-title");
 const startText = document.querySelector(".start-text");
 // Score
@@ -18,6 +20,8 @@ const playerChoiceOut = document.querySelector(".player-choice");
 const rockBtn = document.querySelector(".rock-btn");
 const paperBtn = document.querySelector(".paper-btn");
 const scissorBtn = document.querySelector(".scissor-btn");
+// Other
+let tie = 0;
 
 rockBtn.addEventListener("click", () => {
 	playerSelection = chances[0];
@@ -32,6 +36,7 @@ scissorBtn.addEventListener("click", () => {
 	Game(computerPlay(), playerSelection);
 });
 
+setScore(computerScore, playerScore);
 let Game = (computerSelection, playerSelection) => {
 	// Tie
 	if (computerSelection == playerSelection) {
@@ -75,8 +80,8 @@ let Game = (computerSelection, playerSelection) => {
 };
 
 function setScore(computer, player) {
-	compScoreOut.innerHTML = computer;
-	playerScoreOut.innerHTML = player;
+	compScoreOut.innerHTML = computer + " pont";
+	playerScoreOut.innerHTML = player + " pont";
 }
 
 function setImg(computer, player) {
@@ -85,8 +90,10 @@ function setImg(computer, player) {
 }
 
 newGame.addEventListener("click", () => {
+	subTitle.innerHTML = "";
 	startText.classList.remove("hide");
 	computerScore = 0;
 	playerScore = 0;
 	setScore(computerScore, playerScore);
+	setImg("", "");
 });

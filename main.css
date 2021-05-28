@@ -4,7 +4,7 @@
 	padding: 0;
 }
 body {
-	min-height: 100vh;
+	min-height: 100%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -33,11 +33,15 @@ img {
 	margin: 2em 0 0.5em 0;
 }
 
+.sub-title {
+	animation: 1s show ease-in;
+}
+
 .game-box {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
-	padding: 1em;
+	padding: 0.5em;
 	width: 100%;
 	max-width: 45em;
 }
@@ -48,15 +52,27 @@ img {
 
 .final-choices {
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
+	justify-content: space-between;
 	flex-wrap: wrap;
+	text-align: left;
 	gap: 1em;
 	min-height: 100px;
+	max-width: 30em;
+	align-self: center;
+}
+.final-choice-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* flex-wrap: wrap; */
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 .final-choices img {
 	max-width: 50px;
+	padding: 0.5em;
 }
 
 .players-choices {
@@ -72,19 +88,11 @@ img {
 .choice {
 	cursor: pointer;
 	padding: 0.5em;
-	flex-basis: 5em;
-	flex-shrink: 0;
+	max-width: 100px;
 }
 
-.important {
-	font-weight: 500;
-}
-
-.final-choice-item {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	gap: 1em;
+.choice:hover {
+	opacity: 0.7;
 }
 
 .score {
@@ -109,8 +117,14 @@ img {
 }
 
 .start-text {
+	border: 1px solid rgba(0, 0, 0, 0.123);
+	padding: 0.4em;
 	transition: all 0.8s ease-in-out;
 	position: relative;
+}
+
+.info {
+	text-decoration: underline;
 }
 
 /* Hide an element */
