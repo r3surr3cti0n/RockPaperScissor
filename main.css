@@ -179,6 +179,7 @@ img {
 
 .finale #new-game {
 	position: relative;
+	margin: 0;
 }
 
 /* Hide an element */

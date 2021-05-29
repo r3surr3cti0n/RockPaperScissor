@@ -91,8 +91,7 @@ let Game = (computerSelection, playerSelection) => {
 		} else {
 			text.textContent = "Vesztettél.";
 		}
-		// Append message
-		finale.appendChild(newGame);
+
 		// Classlists
 		finale.classList.remove("hide");
 		document.body.classList.add("dark");
@@ -109,9 +108,12 @@ function setImg(computer, player) {
 	playerChoiceOut.innerHTML = `<img src="img/${player}.png" alt="${player}" title="${player}">`;
 }
 
+// Close start text
 close.addEventListener("click", () => {
 	startText.classList.add("hide");
 });
+
+// New game
 newGame.addEventListener("click", reset);
 
 function reset() {
