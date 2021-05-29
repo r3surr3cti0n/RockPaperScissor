@@ -23,6 +23,7 @@ const scissorBtn = document.querySelector(".scissor-btn");
 // Other
 let tie = 0;
 const finale = document.querySelector(".finale");
+const close = document.querySelector(".close");
 
 rockBtn.addEventListener("click", () => {
 	playerSelection = chances[0];
@@ -92,6 +93,7 @@ let Game = (computerSelection, playerSelection) => {
 		}
 		// Append message
 		finale.appendChild(newGame);
+		// Classlists
 		finale.classList.remove("hide");
 		document.body.classList.add("dark");
 	}
@@ -107,11 +109,13 @@ function setImg(computer, player) {
 	playerChoiceOut.innerHTML = `<img src="img/${player}.png" alt="${player}" title="${player}">`;
 }
 
+close.addEventListener("click", () => {
+	startText.classList.add("hide");
+});
 newGame.addEventListener("click", reset);
 
 function reset() {
 	subTitle.innerHTML = "";
-	startText.classList.remove("hide");
 	computerScore = 0;
 	playerScore = 0;
 	setScore(computerScore, playerScore);
