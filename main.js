@@ -89,12 +89,10 @@ let Game = (computerSelection, playerSelection) => {
 		} else {
 			message.textContent = "Vesztettél.";
 		}
-		// Append replayBtn
-		let replayBtn = document.createElement("button");
-		replayBtn.textContent = "Új játék";
-		message.appendChild(replayBtn);
+
 		// Append message
-		finale.appendChild(message, newGame);
+		finale.appendChild(message);
+		finale.appendChild(newGame);
 		finale.classList.remove("hide");
 		document.body.classList.add("dark");
 	}
