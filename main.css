@@ -114,11 +114,17 @@ img {
 	position: relative;
 }
 
+.new-game-para {
+	display: flex;
+	justify-content: space-between;
+}
+
 #new-game {
-	position: absolute;
+	position: relative;
 	right: 0;
 	cursor: pointer;
 	padding: 0.4em;
+	margin-left: 1em;
 }
 
 .computer-score,
@@ -132,10 +138,21 @@ img {
 }
 
 .start-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 	border: 1px solid rgba(0, 0, 0, 0.123);
-	padding: 0.4em;
+	padding: 0.5em;
 	transition: all 0.8s ease-in-out;
 	position: relative;
+}
+
+.close {
+	position: absolute;
+	right: -0.25em;
+	top: -0.4em;
+	background: white;
 }
 
 .info {
