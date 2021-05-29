@@ -142,6 +142,22 @@ img {
 	text-decoration: underline;
 }
 
+/* Finale */
+.finale {
+	position: fixed;
+	display: grid;
+	place-items: center;
+	background: white;
+	border: 1px solid black;
+	height: 150px;
+	width: 250px;
+	top: 50%;
+	left: 50%;
+	margin-top: -75px;
+	margin-left: -125px;
+	z-index: 10;
+}
+
 /* Hide an element */
 .hide {
 	margin-top: -50px;

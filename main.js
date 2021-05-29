@@ -81,10 +81,6 @@ let Game = (computerSelection, playerSelection) => {
 
 	// End the game
 	if (playerScore + computerScore >= 10) {
-		rockBtn.removeEventListener("click", Decide);
-		paperBtn.removeEventListener("click", Decide);
-		scissorBtn.removeEventListener("click", Decide);
-
 		let message = document.createElement("p");
 		if (playerScore === computerScore) {
 			message.textContent = "Döntetlen.";
