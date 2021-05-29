@@ -22,6 +22,7 @@ const paperBtn = document.querySelector(".paper-btn");
 const scissorBtn = document.querySelector(".scissor-btn");
 // Other
 let tie = 0;
+const finale = document.querySelector(".finale");
 
 rockBtn.addEventListener("click", () => {
 	playerSelection = chances[0];
