@@ -23,6 +23,7 @@ const scissorBtn = document.querySelector(".scissor-btn");
 // Other
 let tie = 0;
 const finale = document.querySelector(".finale");
+let goFurther = true;
 
 rockBtn.addEventListener("click", () => {
 	playerSelection = chances[0];
@@ -80,7 +81,8 @@ let Game = (computerSelection, playerSelection) => {
 	}
 
 	// End the game
-	if (playerScore + computerScore >= 10) {
+	if (playerScore + computerScore >= 10 && goFurther) {
+		goFurther = false;
 		let message = document.createElement("p");
 		if (playerScore === computerScore) {
 			message.textContent = "Döntetlen.";
