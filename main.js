@@ -73,9 +73,33 @@ let Game = (computerSelection, playerSelection) => {
 	setImg(computerSelection, playerSelection);
 	// Score
 	setScore(computerScore, playerScore);
-
+	// Hide startText
 	if (startText.classList.length == 1) {
 		startText.classList.add("hide");
+	}
+
+	// End the game
+	if (playerScore + computerScore >= 10) {
+		rockBtn.removeEventListener("click", Decide);
+		paperBtn.removeEventListener("click", Decide);
+		scissorBtn.removeEventListener("click", Decide);
+
+		let message = document.createElement("p");
+		if (playerScore === computerScore) {
+			message.textContent = "Döntetlen.";
+		} else if (playerScore > computerScore) {
+			message.textContent = "Gratulálok, nyertél!";
+		} else {
+			message.textContent = "Vesztettél.";
+		}
+		// Append replayBtn
+		let replayBtn = document.createElement("button");
+		replayBtn.textContent = "Új játék";
+		message.appendChild(replayBtn);
+		// Append message
+		finale.appendChild(message, newGame);
+		finale.classList.remove("hide");
+		document.body.classList.add("dark");
 	}
 };
 
@@ -89,11 +113,15 @@ function setImg(computer, player) {
 	playerChoiceOut.innerHTML = `<img src="img/${player}.png" alt="${player}" title="${player}">`;
 }
 
-newGame.addEventListener("click", () => {
+newGame.addEventListener("click", reset);
+
+function reset() {
 	subTitle.innerHTML = "";
 	startText.classList.remove("hide");
 	computerScore = 0;
 	playerScore = 0;
 	setScore(computerScore, playerScore);
 	setImg("", "");
-});
+	finale.classList.add("hide");
+	document.body.classList.remove("dark");
+}
