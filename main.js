@@ -121,4 +121,5 @@ function reset() {
 	setImg("", "");
 	finale.classList.add("hide");
 	document.body.classList.remove("dark");
+	goFurther = true;
 }
