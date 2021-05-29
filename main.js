@@ -92,6 +92,7 @@ let Game = (computerSelection, playerSelection) => {
 			text.textContent = "Vesztettél.";
 		}
 
+		finale.append(newGame);
 		// Classlists
 		finale.classList.remove("hide");
 		document.body.classList.add("dark");
@@ -124,4 +125,6 @@ function reset() {
 	setImg("", "");
 	finale.classList.add("hide");
 	document.body.classList.remove("dark");
+	console.log("reset");
+	document.querySelector(".new-game-para").append(newGame);
 }
